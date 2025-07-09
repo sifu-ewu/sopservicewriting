@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+/* Custom HitchHiker font */
+@font-face {
+    font-family: 'HitchHiker';
+    src: url('Hitch-hike.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Enhanced text stroke */
+.text-stroke-black {
+    -webkit-text-stroke: 3px #000;
+    text-shadow: 
+        3px 3px 0px #000,
+        -3px -3px 0px #000,
+        3px -3px 0px #000,
+        -3px 3px 0px #000;
+}
+
+/* Custom brutalist animations */
+@keyframes brutalist-float {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    25% { 
+        transform: translateY(-8px) rotate(1deg); 
+    }
+    50% { 
+        transform: translateY(-4px) rotate(-0.5deg); 
+    }
+    75% { 
+        transform: translateY(-12px) rotate(0.5deg); 
+    }
+}
+
+@keyframes brutalist-pulse {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+    }
+    50% { 
+        transform: scale(1.03) rotate(0.5deg);
+        box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+    }
+}
+
+@keyframes brutalist-shake {
+    0%, 100% { transform: translateX(0); }
+    10% { transform: translateX(-1px) rotate(-0.5deg); }
+    20% { transform: translateX(1px) rotate(0.5deg); }
+    30% { transform: translateX(-1px) rotate(-0.5deg); }
+    40% { transform: translateX(1px) rotate(0.5deg); }
+    50% { transform: translateX(-1px) rotate(-0.5deg); }
+    60% { transform: translateX(1px) rotate(0.5deg); }
+    70% { transform: translateX(-1px) rotate(-0.5deg); }
+    80% { transform: translateX(1px) rotate(0.5deg); }
+    90% { transform: translateX(-1px) rotate(-0.5deg); }
+}
+
+.brutalist-float {
+    animation: brutalist-float 3s ease-in-out infinite;
+}
+
+.brutalist-pulse {
+    animation: brutalist-pulse 2s ease-in-out infinite;
+}
+
+.brutalist-shake:hover {
+    animation: brutalist-shake 0.4s ease-in-out;
+}
+
+/* Enhanced shadow utilities */
+.shadow-brutal {
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-brutal-lg {
+    box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-brutal-white {
+    box-shadow: 8px 8px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+/* Custom border utilities */
+.border-brutal {
+    border: 6px solid #000;
+}
+
+.border-brutal-thick {
+    border: 8px solid #000;
+}
+
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    letter-spacing: -0.025em;
+}
+
+/* Button enhancements */
+button {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0px);
+}
+
+/* Focus states */
+button:focus,
+input:focus {
+    outline: 4px solid #FFD700;
+    outline-offset: 3px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b21031;
+    border: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FFD700;
+}
+
+/* Selection styling */
+::selection {
+    background: #FFD700;
+    color: #000;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    .text-stroke-black {
+        -webkit-text-stroke: 2px #000;
+        text-shadow: 
+            2px 2px 0px #000,
+            -2px -2px 0px #000,
+            2px -2px 0px #000,
+            -2px 2px 0px #000;
+    }
+}
+
+/* Enhanced hover effects */
+.hover-lift:hover {
+    transform: translateY(-6px) rotate(1deg);
+    box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.hover-squish:hover {
+    transform: scaleY(0.96) scaleX(1.04);
+}
+
+/* Glitch effect */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-1px, 1px); }
+    40% { transform: translate(-1px, -1px); }
+    60% { transform: translate(1px, 1px); }
+    80% { transform: translate(1px, -1px); }
+    100% { transform: translate(0); }
+}
+
+.glitch:hover {
+    animation: glitch 0.2s ease-in-out;
+}
+
+/* Neon glow effect */
+.neon-glow {
+    text-shadow: 
+        0 0 3px currentColor,
+        0 0 6px currentColor,
+        0 0 9px currentColor,
+        0 0 12px currentColor;
+}
+
+/* Red neon glow effect */
+.neon-glow-red {
+    text-shadow: 
+        0 0 3px #ff0000,
+        0 0 6px #ff0000,
+        0 0 9px #ff0000,
+        0 0 12px #ff0000,
+        0 0 15px #ff0000;
+}
+
+/* HitchHiker font with red neon */
+.hitchhiker-neon {
+    font-family: 'HitchHiker', 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px #ff0040,
+        0 0 10px #ff0040,
+        0 0 15px #ff0040,
+        0 0 20px #ff0040,
+        0 0 25px #ff0040,
+        0 0 30px #ff0040,
+        0 0 35px #ff0040;
+    animation: neon-flicker 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-flicker {
+    0%, 100% {
+        text-shadow: 
+            0 0 5px #ff0040,
+            0 0 10px #ff0040,
+            0 0 15px #ff0040,
+            0 0 20px #ff0040,
+            0 0 25px #ff0040,
+            0 0 30px #ff0040,
+            0 0 35px #ff0040;
+    }
+    50% {
+        text-shadow: 
+            0 0 3px #ff0040,
+            0 0 8px #ff0040,
+            0 0 13px #ff0040,
+            0 0 18px #ff0040,
+            0 0 23px #ff0040,
+            0 0 28px #ff0040,
+            0 0 33px #ff0040;
+    }
+}
+
+/* Responsive font size for mobile */
+@media (min-width: 640px) {
+    .hitchhiker-neon {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .hitchhiker-neon {
+        font-size: 2.5rem;
+    }
+}
+
+/* Custom grid pattern */
+.grid-pattern {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Brutalist card hover effects */
+.brutalist-card {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brutalist-card:hover {
+    transform: translateX(3px) translateY(3px) rotate(0.5deg);
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+/* Loading animation */
+@keyframes brutalist-loading {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(90deg) scale(1.05); }
+    50% { transform: rotate(180deg) scale(1); }
+    75% { transform: rotate(270deg) scale(1.05); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.loading {
+    animation: brutalist-loading 0.8s linear infinite;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+    .shadow-brutal {
+        box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+    }
+    
+    .shadow-brutal-lg {
+        box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+    }
+    
+    /* Reduce font sizes for mobile */
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    /* Adjust padding and margins for mobile */
+    .brutalist-card {
+        padding: 1rem;
+    }
+    
+    /* Ensure buttons are touch-friendly */
+    button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improve text readability on mobile */
+    p {
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .shadow-brutal {
+        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+    }
+    
+    .shadow-brutal-lg {
+        box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+    }
+}
+
+/* Ensure proper touch targets */
+@media (hover: none) and (pointer: coarse) {
+    button, a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Improve focus visibility for keyboard navigation */
+@media (prefers-reduced-motion: no-preference) {
+    button:focus-visible,
+    a:focus-visible {
+        outline: 3px solid #FFD700;
+        outline-offset: 2px;
+        animation: focus-pulse 1s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes focus-pulse {
+    from { outline-color: #FFD700; }
+    to { outline-color: #b21031; }
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Ensure proper contrast for accessibility */
+.text-contrast {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+}
+
+/* Custom utility classes */
+.rotate-slight {
+    transform: rotate(1deg);
+}
+
+.rotate-slight-reverse {
+    transform: rotate(-1deg);
+}
+
+.border-thick {
+    border-width: 6px;
+}
+
+.border-extra-thick {
+    border-width: 8px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
